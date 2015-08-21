@@ -1,0 +1,542 @@
+/**
+ * Layout styles - (page unSPECIFIC)
+ */
+html {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+  position: relative;
+  min-height: 100%; /*to pull footer down*/
+}
+
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+  margin-top: 70px; /*for fixed top nav height 50px*/
+  margin-bottom: 130px; /* Margin bottom by footer height */
+}
+
+@media screen and (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
+
+
+/**
+ * Large Module classes - (page unSPECIFIC)
+ *
+ */
+
+/*
+  off-canvas styling
+ */
+
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .row-offcanvas-right {
+    right: 0;
+  }
+
+  .row-offcanvas-left {
+    left: 0;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 50%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 50%; /* 6 columns */
+  }
+}
+
+@media screen and (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
+
+/**
+ * Minor Tweaks/Small Modules - (page unSPECIFIC)
+ */
+
+.comment-input {
+  background-color: #eee;
+}
+
+.list-group-item.notify,
+.list-group-item.notify:hover,
+.list-group-item.notify:focus {
+  z-index: 2;
+  color: #333;
+  background-color: #91bce0;
+  border-color: #91bce0;
+}
+
+.comment-best {
+  font-size: 1.6em;
+}
+
+.comment-votes .badge {
+  font-size: 1.7em;
+}
+
+.post-votes .badge {
+  font-size: 1.7em;
+}
+
+/*
+.list-item-tags-list {
+  padding-left: 0px;
+  margin: 0px;
+  vertical-align: top;
+}
+
+.list-item-tags-list > button {
+  margin-right: 1em;
+}
+
+.list-item-tags-list li + li {
+  padding-left: 5px;
+}
+*/
+.list-group-item-text > .btn-group,
+.list-group-item-text > .btn {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 5px;
+}
+
+a > .list-group-item-heading {
+  text-decoration: none;
+  color: #333;
+}
+
+.list-buttons a {
+  vertical-align: top;
+  margin-bottom: 5px;
+}
+
+.post-tags > a {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 5px;
+}
+
+.list-horizontal {
+  list-style: none;
+}
+
+.list-horizontal,
+.list-horizontal li {
+  display: inline-block;
+}
+
+
+textarea {
+  resize: vertical;
+}
+
+.page-separator {
+  min-height: 1px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.form-bundle {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.clear-both {
+  clear: both;
+}
+
+.list-group-head {
+  color: #777;
+  background-color: #eee;
+}
+
+.text-alert {
+  color: #ff9800;
+}
+
+.bg-alert {
+  background-color: #ffff7e;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-inline-block {
+  display: block;
+}
+
+button > a.display-block {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.list-group-item > a.display-block {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  text-decoration: none;
+}
+
+footer .navbar {
+  border-radius: 4px; /*because there was none at default*/
+}
+
+#topbar_menu_collapse .btn-group {/*xs styles spacing away status bar from avatar*/
+  margin-left: 10%
+}
+
+.avatar {/*base avatar style*/
+  width: 50px;
+  height: 50px;
+}
+
+.avatar-big {
+  width: 120px;
+  height: 120px;
+}
+
+.avatar.avatar-navbar {/*position avatar inside navbar*/
+  width: 36px;
+  height: 36px;
+  margin-top: -6px;
+  margin-bottom: -6px;
+}
+
+.avatar-form {
+  margin-bottom: 15px;
+}
+
+.avatar-form .avatar-label {
+  vertical-align: center;
+  box-sizing: border-box;
+  color: rgb(51, 51, 51);
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 19px;
+}
+
+.avatar-form .avatar-control {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 7px;
+}
+
+.avatar-form .avatar-control .avatar {
+  margin-right: 15px;
+}
+
+.badge.badge-leftpad {/*properly position the glyphicons*/
+  margin-left: 4px;
+}
+
+.badge.badge-active {
+  background-color: #337ab7;
+}
+
+.glyphicon.glyphicon-pad {/*properly position the glyphicons*/
+  margin-top: -4px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.glyphicon.glyphicon-ml {/*increase glyphicon size*/
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+
+.sm-padding-top {
+  padding-top: 1.3em;
+}
+
+.xs-margin-top {
+  margin-top: 0.8em;
+}
+
+.sm-margin-top {
+  margin-top: 1.3em;
+}
+
+.m-margin-top {
+  margin-top: 2.3em;
+}
+
+.xs-margin-bottom {
+  margin-bottom: 0.8em;
+}
+
+.sm-margin-bottom {
+  margin-bottom: 1.3em;
+}
+
+.m-margin-bottom {
+  margin-bottom: 2.3em;
+}
+
+.tab-pane.tab-bordered,
+.tab-content.tab-bordered {/*Set padding and surrounding border to tab pane*/
+  padding: 12px;
+  padding-top: 15px;
+  border: 1px solid #ddd;
+  border-top: none;
+}
+
+.errata { /*utility for error or alert messages*/
+  padding: 0.8em;
+  border-radius: 3px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 52px; /* Set the fixed height of the footer here */
+  background-color: #f5f5f5;
+}
+
+footer .navbar {
+  margin-bottom: 0px;/*Remove bottom margin on Footer navbar*/
+}
+
+footer .navbar-right {
+  margin-right: 0px; /*Remove negative margin on Copyright(-15px)*/
+}
+
+footer .navbar-text {
+  text-align: center; /*Center align Copyright on mobile*/
+}
+
+@media screen and (min-width: 768px) {
+  .comment {
+    margin-left: 7%;
+  }
+
+  .navbar-search { /*A bit larger width for holding btn + input of topbar search*/
+    width: 380px;
+    margin-right:auto;
+    margin-left: auto;
+  }
+
+  .navbar-search .search-input {
+    width: 300px; /*Fixed smaller width for topbar search input*/
+  }
+
+  .avatar-form .avatar-label {
+    text-align: right;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-search { /*Even larger width for holding btn + input of topbar search*/
+    width: 480px;
+    margin-right:auto;
+    margin-left: auto;
+  }
+
+  .navbar-search .search-input {
+    width: 400px; /*Fixed larger width for topbar search input*/
+  }
+}
+
+@media (min-width: 1200px) {}
+
+/*
+    oppposite cascading styles - warning!
+ */
+
+@media (max-width: 1199px) and (max-width: 992px) {}
+@media (max-width: 991px) and (max-width: 768px) {}
+@media (max-width: 767px) {
+
+  .btn-xs-in,
+  .btn-group-xs-in > .btn {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+  }
+
+  .btn-xs-in > .badge,
+  .btn-group-xs-in > .btn .badge {
+    top: 0;
+    padding: 1px 5px;
+  }
+
+  .navbar-search button {
+    width: 100%; /*max the screen on mobile for search's submit btn in topbar*/
+  }
+
+  /*ghost style
+  .navbar-search button .glyphicon {
+    text-align: left;
+    margin-right: 20px;
+  }*/
+}
+
+@media (max-width: 571px) {
+  .hidden-xxs {
+    display: none !important; /*resonsive status badge in topbar*/
+  }
+
+  #topbar .btn-group > .btn:nth-child(3) { /*round edge after hiding the last status btn*/
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}
+
+@media (max-width: 470px) {
+  #topbar .btn-group {
+    margin-left: 6%; /*decrease margin of status bar in topbar*/
+  }
+  #topbar .btn-group >.btn { /*decrease size of status bar in topbar*/
+    padding: 5px 5px;
+    font-size: 9px;
+    line-height: 1em;
+  }
+}
+
+@media (max-width: 430px) {
+  #topbar .btn-group {
+    margin-left: 3%; /*decrease margin of status bar in topbar*/
+  }
+  .hidden-xxxs {
+    display: none !important; /*resonsive status badge in topbar*/
+  }
+  .visible-xxxs-inline-block {
+    display: inline-block !important; /*resonsive status badge in topbar*/
+  }
+
+  #topbar .btn-group >.btn .glyphicon {
+    padding-left: 4px; /*resonsive status badge in topbar*/
+  }
+}
+
+/**
+ * Layout styles - page SPECIFIC
+ */
+
+#page_login  {
+  padding-top: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  #page_login  {
+    padding-top: 90px;
+  }
+}
+
+@media (min-width: 992px) {
+  #page_login  {
+    padding-top: 140px;
+  }
+}
+
+
+/**
+ * Minor Tweaks/Small Modules - page SPECIFIC
+ */
+
+#page_profile .modal-submit button {
+  width: 70px;
+}
+
+#page_search .list-group-item .avatar {
+  margin-right: 1.3em;
+}
+
+#page_contact_search .list-group-item .avatar {
+  margin-right: 1.3em;
+}
+
+#msg_conversation {
+  overflow-y: ;
+}
+
+#msg_conversation .sm-padding-top.msg_option {
+  border-top: 1px solid #ddd;
+}
+
+#msg_conversation .msg_option {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#msg_conversation > .row:first-child {
+  height: 20em;
+}
+
+#msg_conversation > .row > #msg_contact,
+#msg_conversation #msg_contact > .list-group,
+#msg_conversation > .row > #msg_inbox  {
+  display: block;
+  height: 100%;
+}
+
+#msg_conversation #msg_contact,
+#msg_conversation #msg_inbox {
+  overflow-y: auto;
+}
+
+#msg_conversation #msg_inbox .msg_recieved,
+#msg_conversation #msg_inbox .msg_sent {
+  box-sizing: border-box;
+  width: 80%;
+  padding: 0.8em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
+
+
+/*opposite cascading styles - warning*/
+@media (max-width: 1199px) and (max-width: 992px) {}
+@media (max-width: 991px) and (max-width: 768px) {}
+@media (max-width: 767px) {
+  #page_profile_view #score {
+    text-align: center;
+  }
+}
