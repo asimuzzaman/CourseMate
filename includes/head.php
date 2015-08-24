@@ -2,8 +2,8 @@
   require_once("database.php");
 
   function whoami() { //name is similar to unix command
-    if(!isset($_SESSION["username"])) return NULL;
-    else return $_SESSION["username"];
+    if(!isset($_SESSION['user'])) return NULL;
+    else return $_SESSION['user'];
   }
 
   function ToDate($time) {

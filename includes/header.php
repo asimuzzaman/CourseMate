@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>--><!--navbar-toggle collapsed-->
-      <a class="navbar-brand" href="/home">nsu-ed</a>
+      <a class="navbar-brand" href="/home"><img src="/img/logo.jpg" alt="CourseMate" style="width:165px;height:25px;"></a>
     </div><!--/.navbar-header-->
     <div id="topbar_menu_collapse" class="collapse navbar-collapse">
       <button type="button" class="btn btn-default navbar-btn navbar-right"><a class="display-block" href="/index.php">Sign in</a></button>
@@ -29,7 +29,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>--><!--navbar-toggle collapsed-->
-      <a class="navbar-brand" href="/home">nsu-ed</a>
+      <a class="navbar-brand" href="/home"><img src="/img/logo.jpg" alt="CourseMate" style="width:165px;height:25px;"></a>
     </div><!--/.navbar-header-->
     <div id="topbar_menu_collapse" class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
@@ -74,7 +74,7 @@
             </li>
             <li role="separator" class="divider"></li>
             <li>
-              <a href="/"><?php $_SESSION["username"] = NULL; ?><span class="glyphicon glyphicon-off glyphicon-pad"></span> logout</a>
+              <a href="/?f=logout"><span class="glyphicon glyphicon-off glyphicon-pad"></span> logout</a>
             </li>
           </ul><!--dropdown-menu-->
         </li><!--/.dropdown-->
