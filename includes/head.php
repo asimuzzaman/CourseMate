@@ -1,6 +1,6 @@
 <?php
   require_once("database.php");
-
+  session_start();
   function whoami() { //name is similar to unix command
     if(!isset($_SESSION['user'])) return NULL;
     else return $_SESSION['user'];
