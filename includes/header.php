@@ -66,7 +66,7 @@
             </li>
             <li role="separator" class="divider"></li>
             <li>
-              <a href="/cgpa/edit"><span class="glyphicon glyphicon-envelope glyphicon-pad"></span> CGPA Edit <span class="badge badge-leftpad badge-active">6</span></a>
+              <a href="/grade/edit"><span class="glyphicon glyphicon-envelope glyphicon-pad"></span> CGPA Edit <span class="badge badge-leftpad badge-active">6</span></a>
             </li>
             <li role="separator" class="divider"></li>
             <li>

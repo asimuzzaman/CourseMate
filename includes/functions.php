@@ -20,6 +20,29 @@
     }
   }
 
+  function UpdateCourse() {
+    if(isset($_POST['update_course'])) {
+      $CID= $_GET['id']; //course id
+      $code= escape($_POST['code']);
+      $credit= $_POST['credit'];
+      $semester= $_POST['semester'];
+      $point= $_POST['grade'];
+      global $USERID;
+      if(isset($_POST['retake'])) $is_retake= true;
+      else $is_retake= 'NULL';
+
+      $query= "UPDATE grades SET course='$code', grade=$point, credit=$credit, semester=$semester, is_retake=$is_retake";
+      $query.= " WHERE user_id= $USERID AND grade_id=$CID";
+      query($query);
+?>
+    <div class="alert alert-success alert-dismissible fade in">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      <span class="glyphicon glyphicon-thumbs-up glyphicon-pad"></span> Course successfully updated!
+    </div>
+  <?php
+    }
+  }
+
   function DecodeSemester($semester) { //takes '152' and gives 'Summer 15'
     $letter= $semester%10;
     $year= intval($semester/10);
