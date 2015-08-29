@@ -124,7 +124,7 @@
             </thead>
             <tbody>
 <?php
-  $query= "SELECT grade_id, course, grade, credit, semester FROM grades ORDER BY grade_id DESC";
+  $query= "SELECT grade_id, course, grade, credit, semester FROM grades WHERE user_id=$USERID ORDER BY grade_id DESC";
   $result= query($query);
   $i=1;
   while($row= mysqli_fetch_array($result)) {
