@@ -1,7 +1,12 @@
 <?php
   function ConnectDb() {
     global $connect;
-    $connect = mysqli_connect("localhost","root","1234","course_mate");
+    //$username= "root";
+    //$password= "1234";
+    $username= "adminCVRi2KV";
+    $password= "9uKVQmHjJ4l7";
+
+    $connect = mysqli_connect("localhost","$username","$password","coursemate");
 
     if(mysqli_connect_errno()) {
       echo "Unable to connect to database: " . mysqli_connect_error() ."<br/>";

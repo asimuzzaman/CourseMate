@@ -9,7 +9,7 @@
       if(isset($_POST['retake'])) $is_retake= true;
       else $is_retake= 'NULL';
 
-      $query= "INSERT INTO grades VALUES (NULL, '$code', $point, $credit, $USERID, $semester, $is_retake)";
+      $query= "INSERT INTO GRADES VALUES (NULL, '$code', $point, $credit, $USERID, $semester, $is_retake)";
       query($query);
 ?>
     <div class="alert alert-success alert-dismissible fade in">
@@ -31,7 +31,7 @@
       if(isset($_POST['retake'])) $is_retake= true;
       else $is_retake= 'NULL';
 
-      $query= "UPDATE grades SET course='$code', grade=$point, credit=$credit, semester=$semester, is_retake=$is_retake";
+      $query= "UPDATE GRADES SET course='$code', grade=$point, credit=$credit, semester=$semester, is_retake=$is_retake";
       $query.= " WHERE user_id= $USERID AND grade_id=$CID";
       query($query);
 ?>
@@ -64,7 +64,7 @@
   }
 
   function DecodeGrade($point) { //takes '4.00' and gives 'A'
-    $query= "SELECT letter FROM letter_grades WHERE point= $point";
+    $query= "SELECT letter FROM LETTER_GRADES WHERE point= $point";
     $result= query($query);
     $row= mysqli_fetch_array($result);
 

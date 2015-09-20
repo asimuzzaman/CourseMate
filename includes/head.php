@@ -13,7 +13,7 @@
   //$USERNAME = "admin"; //hard login, temporary user, to be removed
   ConnectDb();
   function GetId($username){
-    $query= "SELECT id FROM users WHERE username = '$username'";
+    $query= "SELECT id FROM USERS WHERE username = '$username'";
     $result= query($query);
     $row= mysqli_fetch_array($result);
     return $row[0];

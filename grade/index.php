@@ -34,14 +34,14 @@
     <div class="row row-offcanvas row-offcanvas-right">
       <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10">
 <?php
-  $query= "SELECT SUM(credit), SUM(grade*credit) FROM grades WHERE user_id=$USERID";
+  $query= "SELECT SUM(credit), SUM(grade*credit) FROM GRADES WHERE user_id=$USERID";
   $result= query($query);
   $row= mysqli_fetch_array($result);
 
   $totalcredit= $row[0]; //total credits passed
   $cgpa= $row[1]/$row[0]; //CGPA
 
-  $query= "SELECT first_name, last_name FROM users WHERE id= $USERID";
+  $query= "SELECT first_name, last_name FROM USERS WHERE id= $USERID";
   $result= query($query);
   $row= mysqli_fetch_array($result);
   $name= $row[0] . ' ' . $row[1]; //full name of user
@@ -52,7 +52,7 @@
            <font size="3"><ul>
             <li>Total credits completed: <?php echo $totalcredit; ?><br/>
 <?php
-  $query= "SELECT MAX(grade), MIN(grade) FROM grades";
+  $query= "SELECT MAX(grade), MIN(grade) FROM GRADES";
   $result= query($query);
   $row= mysqli_fetch_array($result);
 ?>
@@ -61,14 +61,14 @@
            </font>
         </div>
 <?php
-  $query= "SELECT DISTINCT semester FROM grades ORDER BY semester ASC";
+  $query= "SELECT DISTINCT semester FROM GRADES ORDER BY semester ASC";
   $result= query($query);
   while($row= mysqli_fetch_array($result)) {
     $sem= $row['semester'];
 ?>
         <h4 align="center"><?php echo DecodeSemester($sem); ?></h4>
 <?php
-    $query= "SELECT SUM(credit), SUM(credit*grade) FROM grades WHERE semester= $sem ";
+    $query= "SELECT SUM(credit), SUM(credit*grade) FROM GRADES WHERE semester= $sem ";
     $query.= "AND user_id=$USERID GROUP BY semester";
     $res= query($query);
 
@@ -90,7 +90,7 @@
           <tbody>
 <?php
       $i=1;
-      $query= "SELECT * FROM grades WHERE semester=$sem AND user_id=$USERID";
+      $query= "SELECT * FROM GRADES WHERE semester=$sem AND user_id=$USERID";
       $out= query($query);
       while($course= mysqli_fetch_array($out)) {
 ?>
@@ -107,7 +107,7 @@
 <?php } ?>
         <h4 align="center"><b>Grade wise course list</b></h4><hr/>
 <?php
-  $query= "SELECT DISTINCT l.letter, l.point FROM letter_grades l JOIN grades g ON (l.point=g.grade) ORDER BY l.g_id";
+  $query= "SELECT DISTINCT l.letter, l.point FROM LETTER_GRADES l JOIN GRADES g ON (l.point=g.grade) ORDER BY l.g_id";
   $result= query($query);
   while($row= mysqli_fetch_array($result)) {
 
@@ -124,7 +124,7 @@
             <tbody>
 <?php
     $i=1;
-    $query= "SELECT course FROM grades WHERE user_id=$USERID AND grade=".$row[1];
+    $query= "SELECT course FROM GRADES WHERE user_id=$USERID AND grade=".$row[1];
     $res= query($query);
     while($course= mysqli_fetch_array($res)) {
 ?>

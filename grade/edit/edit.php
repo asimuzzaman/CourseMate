@@ -28,7 +28,7 @@
       <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10">
 <?php
   $CID= $_GET['id'];
-  $query= "SELECT * FROM grades WHERE grade_id= $CID";
+  $query= "SELECT * FROM GRADES WHERE grade_id= $CID";
   $result= query($query);
   $course= mysqli_fetch_array($result);
 ?>
@@ -59,7 +59,7 @@
             <label for="grade">Grade</label>
             <select class="form-control" id="grade" name="grade" form="update_course">
 <?php
-  $query= "SELECT letter, point FROM letter_grades";
+  $query= "SELECT letter, point FROM LETTER_GRADES";
   $result= query($query);
   while($row= mysqli_fetch_array($result)) {
     $point= $row['point'];
@@ -80,7 +80,7 @@
 <?php
   $all_semester= array('Spring','Summer','Fall');
 
-  $query= "SELECT year FROM users WHERE id= $USERID";
+  $query= "SELECT year FROM USERS WHERE id= $USERID";
   $result= query($query);
   $row= mysqli_fetch_array($result);
   $year= $row['year'] % 1000;

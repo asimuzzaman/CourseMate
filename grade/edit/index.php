@@ -50,7 +50,7 @@
 
   if(isset($_POST['delete'])) {
     $grade_id= $_GET['id'];
-    $query= "DELETE FROM grades WHERE grade_id= $grade_id";
+    $query= "DELETE FROM GRADES WHERE grade_id= $grade_id";
     query($query);
 ?>
     <div class="alert alert-success alert-dismissible fade in">
@@ -80,7 +80,7 @@
                 <label for="grade">Grade</label>
                 <select class="form-control" id="grade" name="grade" form="add_course">
 <?php
-  $query= "SELECT letter, point FROM letter_grades";
+  $query= "SELECT letter, point FROM LETTER_GRADES";
   $result= query($query);
   while($row= mysqli_fetch_array($result)) {
     $point= $row['point'];
@@ -93,7 +93,7 @@
                 <label for="semester">Semester</label>
                 <select class="form-control" id="semester" name="semester" form="add_course">
 <?php
-  $query= "SELECT year FROM users WHERE id= $USERID";
+  $query= "SELECT year FROM USERS WHERE id= $USERID";
   $result= query($query);
   $row= mysqli_fetch_array($result);
   $year= $row['year'] % 1000;
@@ -124,7 +124,7 @@
             </thead>
             <tbody>
 <?php
-  $query= "SELECT grade_id, course, grade, credit, semester FROM grades WHERE user_id=$USERID ORDER BY grade_id DESC";
+  $query= "SELECT grade_id, course, grade, credit, semester FROM GRADES WHERE user_id=$USERID ORDER BY grade_id DESC";
   $result= query($query);
   $i=1;
   while($row= mysqli_fetch_array($result)) {
